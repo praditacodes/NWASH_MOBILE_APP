@@ -1,0 +1,1 @@
+web: gunicorn nwash_backend.wsgi 

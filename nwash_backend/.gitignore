@@ -1,0 +1,46 @@
+# Python
+__pycache__/
+*.py[cod]
+*.pyo
+*.pyd
+*.pyc
+
+# Virtual environment
+venv/
+ENV/
+.env
+.env.*
+
+# Django static and media files
+staticfiles/
+media/
+
+# Database
+*.sqlite3
+
+# VSCode and IDEs
+.vscode/
+.idea/
+*.sublime-project
+*.sublime-workspace
+
+# OS files
+.DS_Store
+Thumbs.db
+
+# Logs
+*.log
+
+# Python egg files
+*.egg-info/
+.eggs/
+
+db.sqlite3
+
+# Render build artifacts
+build/
+dist/
+
+# Pip
+pip-log.txt
+pip-delete-this-directory.txt 

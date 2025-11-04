@@ -1,0 +1,63 @@
+name: nwash_new
+description: "NWASH Mobile Application"
+publish_to: 'none'
+version: 1.0.0+1
+
+environment:
+  sdk: '>=3.0.0 <4.0.0'
+
+dependencies:
+  flutter:
+    sdk: flutter
+  flutter_localizations:
+    sdk: flutter
+  cupertino_icons: ^1.0.7
+  provider: ^6.1.2
+  shared_preferences: ^2.2.2
+  path_provider: ^2.1.2
+  intl_phone_field: ^3.1.0
+  connectivity_plus: ^5.0.2
+  permission_handler: ^11.3.0
+  image_picker: ^1.0.7
+  record: ^6.1.2
+  path: ^1.9.0
+  geolocator: ^11.0.0
+  camera: ^0.10.5+5
+  location: ^5.0.0
+  sqflite: ^2.3.2
+  logging: ^1.2.0
+  intl: ^0.20.2
+  crypto: ^3.0.3
+  http: ^1.2.1
+  json_annotation: ^4.8.1
+  dio: ^5.4.0  # For better HTTP client with interceptors
+    # For local storage
+  logger: ^2.0.2  # For better logging
+
+dev_dependencies:
+  flutter_test:
+    sdk: flutter
+  flutter_lints: ^3.0.1
+  json_serializable: ^6.7.1
+  build_runner: ^2.4.7
+  flutter_launcher_icons: ^0.13.1
+  flutter_native_splash: ^2.3.2
+
+flutter:
+  uses-material-design: true
+  # Add your image assets here if you have any
+  # fonts:
+  #   - family: MyCustomFont
+  #     fonts:
+  #       - asset: assets/fonts/MyCustomFont-Regular.ttf  # Ensure this file exists
+
+flutter_icons:
+  android: true
+  ios: true
+  image_path: "assets/nwash.png"
+
+flutter_native_splash:
+  color: "#ffffff"
+  image: assets/nwash.png
+  android: true
+  ios: true

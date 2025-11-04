@@ -1,0 +1,26 @@
+services:
+  - type: web
+    name: nwash-backend
+    env: python
+    buildCommand: "pip install -r requirements.txt && python manage.py migrate"
+    startCommand: "gunicorn nwash_backend.wsgi:application"
+    pythonVersion: "3.10.10"
+    envVars:
+      - key: DJANGO_SETTINGS_MODULE
+        value: nwash_backend.settings
+      - key: DJANGO_DEBUG
+        value: 'False'
+      - key: DJANGO_SECRET_KEY
+        generateValue: true
+      - key: DJANGO_ALLOWED_HOSTS
+        value: 'nwash-backend.onrender.com,localhost,127.0.0.1'
+      - key: WEB_CONCURRENCY
+        value: '4'
+    plan: free
+    numInstances: 1
+
+databases:
+  - name: nwash-db
+    plan: free
+    databaseName: nwash_db
+    user: nwash_user
