@@ -1,0 +1,25 @@
+# Global
+.DS_Store
+*.log
+
+# Python / Django (backend)
+nwash_backend/venv/
+nwash_backend/__pycache__/
+**/__pycache__/
+*.pyc
+nwash_backend/db.sqlite3
+nwash_backend/media/
+nwash_backend/staticfiles/
+nwash_backend/.env
+
+# Flutter (frontend)
+nwash_new/build/
+nwash_new/.dart_tool/
+nwash_new/.flutter-plugins*
+nwash_new/.packages
+nwash_new/android/local.properties
+nwash_new/android/.gradle/
+nwash_new/android/app/release/
+nwash_new/ios/Pods/
+*.iml
+.idea/
