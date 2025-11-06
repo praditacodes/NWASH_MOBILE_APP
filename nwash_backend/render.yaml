@@ -2,7 +2,7 @@ services:
   - type: web
     name: nwash-backend
     env: python
-    buildCommand: "pip install -r requirements.txt && python manage.py migrate"
+    buildCommand: "pip install -r requirements.txt && python manage.py collectstatic --noinput && python manage.py migrate"
     startCommand: "gunicorn nwash_backend.wsgi:application"
     pythonVersion: "3.10.10"
     envVars:
@@ -14,6 +14,8 @@ services:
         generateValue: true
       - key: DJANGO_ALLOWED_HOSTS
         value: 'nwash-backend.onrender.com,localhost,127.0.0.1'
+      - key: CORS_ALLOW_ALL_ORIGINS
+        value: 'True'
       - key: WEB_CONCURRENCY
         value: '4'
     plan: free
